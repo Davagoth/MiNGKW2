@@ -1,5 +1,0 @@
-	public static void main(String[] args) throws Exception {
-	CharStream charStreams = CharStreams.fromFileName("./example.txt");
-	Integer result = calc(charStreams);
-	System.out.println("Result = " + result);
-}
