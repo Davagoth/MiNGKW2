@@ -72,38 +72,29 @@ public class CalculatorMainListener extends CalculatorBaseListener{
     }
 
     public static void main(String[] args) {
-        Double result = calc("1 - 2");
-        System.out.println("Result = " + result);
-
         Double result1 = calc("2 + 4");
-        System.out.println("Result = " + result1);
+        System.out.println("Result1 = " + result1);
 
-        Double result2 = calc("4 * 3");
-        System.out.println("Result = " + result2);
+        Double result2 = calc("1 - 2");
+        System.out.println("Result2 = " + result2);
 
-        Double result3 = calc("4 / 2");
-        System.out.println("Result = " + result3);
+        Double result3 = calc("4 * 3");
+        System.out.println("Result3 = " + result3);
 
-        Double result4 = calc("sqrt9");
-        System.out.println("Result = " + result4);
+        Double result4 = calc("4 / 2");
+        System.out.println("Result4 = " + result4);
 
-        Double result5 = calc("2 ^ 3");
-        System.out.println("Result = " + result5);
+        Double result5 = calc("sqrt9");
+        System.out.println("Result5 = " + result5);
 
-        Double resultX = calc("-2 + sqrt9 + 2 ^ 3 * 10");
-        System.out.println("Result = " + resultX);
+        Double result6 = calc("2 ^ 3");
+        System.out.println("Result6 = " + result6);
 
-        Double resultY = calc("2 * 3 - 1 / -2");
-        System.out.println("Result = " + resultY);
+        Double resultA = calc("-2 + sqrt3 + 2 ^ 3 * 10");
+        System.out.println("ResultA = " + resultA);// -3 + 1,732 + 8 * 10 = -0,268 + 80 = 79,732
 
-        Double resultZ = calc("3 ^ 2 - 7 * sqrt4 + sqrt5");
-        System.out.println("Result = " + resultZ);
-
-        Double resultQ = calc("sqrt16 - 3 * 4 / sqrt1 - 9 + -2");
-        System.out.println("Result = " + resultQ);
-
-        Double resultP = calc("4 + 3 * 4 - 9");
-        System.out.println("Result = " + resultP);
+        Double resultB = calc("2 * 3 - 1 / -2 ^ 3");
+        System.out.println("ResultB = " + resultB);// 6 - 1 / -8 = 6 + 0,125 = 6,125
     }
 
     public static Double calc(String expression) {
