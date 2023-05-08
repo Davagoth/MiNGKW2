@@ -16,13 +16,13 @@ public class CalculatorBaseListener implements CalculatorListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpression(CalculatorParser.ExpressionContext ctx) { }
+	@Override public void enterAdditionExpression(CalculatorParser.AdditionExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpression(CalculatorParser.ExpressionContext ctx) { }
+	@Override public void exitAdditionExpression(CalculatorParser.AdditionExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -40,25 +40,49 @@ public class CalculatorBaseListener implements CalculatorListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterPowExpression(CalculatorParser.PowExpressionContext ctx) { }
+	@Override public void enterExponentiationExpression(CalculatorParser.ExponentiationExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitPowExpression(CalculatorParser.PowExpressionContext ctx) { }
+	@Override public void exitExponentiationExpression(CalculatorParser.ExponentiationExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterIntegralExpression(CalculatorParser.IntegralExpressionContext ctx) { }
+	@Override public void enterNegationExpression(CalculatorParser.NegationExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitIntegralExpression(CalculatorParser.IntegralExpressionContext ctx) { }
+	@Override public void exitNegationExpression(CalculatorParser.NegationExpressionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterSqrtExpression(CalculatorParser.SqrtExpressionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitSqrtExpression(CalculatorParser.SqrtExpressionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterAtom(CalculatorParser.AtomContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAtom(CalculatorParser.AtomContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

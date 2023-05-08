@@ -1,9 +1,11 @@
 grammar Calculator;
 
-expression: multiplicationExpression ((PLUS | MINUS) multiplicationExpression)* ;
-multiplicationExpression: powExpression ((MULT | DIV) powExpression)* ;
-powExpression: integralExpression ((POW) integralExpression)* ;
-integralExpression: MINUS integralExpression | INT | SQRT integralExpression;
+additionExpression: multiplicationExpression ((PLUS | MINUS) multiplicationExpression)* ;
+multiplicationExpression: exponentiationExpression ((MULT | DIV) exponentiationExpression)* ;
+exponentiationExpression: negationExpression (POW negationExpression)* ;
+negationExpression: MINUS atom | atom | sqrtExpression;
+sqrtExpression: SQRT atom ;
+atom: INT;
 
 SQRT: 'sqrt' ;
 INT: [0-9]+ ;

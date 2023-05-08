@@ -7,15 +7,15 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface CalculatorListener extends ParseTreeListener {
 	/**
-	 * Enter a parse tree produced by {@link CalculatorParser#expression}.
+	 * Enter a parse tree produced by {@link CalculatorParser#additionExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterExpression(CalculatorParser.ExpressionContext ctx);
+	void enterAdditionExpression(CalculatorParser.AdditionExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link CalculatorParser#expression}.
+	 * Exit a parse tree produced by {@link CalculatorParser#additionExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitExpression(CalculatorParser.ExpressionContext ctx);
+	void exitAdditionExpression(CalculatorParser.AdditionExpressionContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link CalculatorParser#multiplicationExpression}.
 	 * @param ctx the parse tree
@@ -27,23 +27,43 @@ public interface CalculatorListener extends ParseTreeListener {
 	 */
 	void exitMultiplicationExpression(CalculatorParser.MultiplicationExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link CalculatorParser#powExpression}.
+	 * Enter a parse tree produced by {@link CalculatorParser#exponentiationExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterPowExpression(CalculatorParser.PowExpressionContext ctx);
+	void enterExponentiationExpression(CalculatorParser.ExponentiationExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link CalculatorParser#powExpression}.
+	 * Exit a parse tree produced by {@link CalculatorParser#exponentiationExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitPowExpression(CalculatorParser.PowExpressionContext ctx);
+	void exitExponentiationExpression(CalculatorParser.ExponentiationExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link CalculatorParser#integralExpression}.
+	 * Enter a parse tree produced by {@link CalculatorParser#negationExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterIntegralExpression(CalculatorParser.IntegralExpressionContext ctx);
+	void enterNegationExpression(CalculatorParser.NegationExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link CalculatorParser#integralExpression}.
+	 * Exit a parse tree produced by {@link CalculatorParser#negationExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitIntegralExpression(CalculatorParser.IntegralExpressionContext ctx);
+	void exitNegationExpression(CalculatorParser.NegationExpressionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link CalculatorParser#sqrtExpression}.
+	 * @param ctx the parse tree
+	 */
+	void enterSqrtExpression(CalculatorParser.SqrtExpressionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CalculatorParser#sqrtExpression}.
+	 * @param ctx the parse tree
+	 */
+	void exitSqrtExpression(CalculatorParser.SqrtExpressionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link CalculatorParser#atom}.
+	 * @param ctx the parse tree
+	 */
+	void enterAtom(CalculatorParser.AtomContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CalculatorParser#atom}.
+	 * @param ctx the parse tree
+	 */
+	void exitAtom(CalculatorParser.AtomContext ctx);
 }
