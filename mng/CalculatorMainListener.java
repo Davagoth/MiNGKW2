@@ -43,7 +43,7 @@ public class CalculatorMainListener extends CalculatorBaseListener{
     public void exitExponentiationExpression(CalculatorParser.ExponentiationExpressionContext ctx) {
         System.out.println("exitExponentiationExpression: " + ctx.getText());
         Double value = numbers.pop();
-        for (int i = ctx.getChildCount() - 2; i >= 1; i -= 2) {
+        for (int i = 1; i < ctx.getChildCount(); i += 2) {
             value = Math.pow(numbers.pop(), value);
         }
         numbers.push(value);
@@ -87,7 +87,7 @@ public class CalculatorMainListener extends CalculatorBaseListener{
         Double result3 = calc("4 * 3");
         System.out.println("Result3 = " + result3);
 
-        Double result4 = calc("4 / 2");
+        Double result4 = calc("2 / 3");
         System.out.println("Result4 = " + result4);
 
         Double result5 = calc("sqrt9");
