@@ -21,6 +21,7 @@ public class CalculatorMainListener extends CalculatorBaseListener{
             }
         }
         numbers.push(value);
+        super.exitAdditionExpression(ctx);
     }
 
     @Override
@@ -35,6 +36,7 @@ public class CalculatorMainListener extends CalculatorBaseListener{
             }
         }
         numbers.push(value);
+        super.exitMultiplicationExpression(ctx);
     }
 
     @Override
@@ -45,6 +47,7 @@ public class CalculatorMainListener extends CalculatorBaseListener{
             value = Math.pow(numbers.pop(), value);
         }
         numbers.push(value);
+        super.exitExponentiationExpression(ctx);
     }
 
     @Override
@@ -53,18 +56,21 @@ public class CalculatorMainListener extends CalculatorBaseListener{
         if (ctx.MINUS() != null) {
             numbers.push(-numbers.pop());
         }
+        super.exitNegationExpression(ctx);
     }
 
     @Override
     public void exitSqrtExpression(CalculatorParser.SqrtExpressionContext ctx) {
         System.out.println("exitSqrtExpression: " + ctx.getText());
         numbers.push(Math.sqrt(numbers.pop()));
+        super.exitSqrtExpression(ctx);
     }
 
     @Override
     public void exitAtom(CalculatorParser.AtomContext ctx) {
         System.out.println("exitAtom: " + ctx.getText());
         numbers.push(Double.parseDouble(ctx.INT().getText()));
+        super.exitAtom(ctx);
     }
 
     private Double getResult() {
