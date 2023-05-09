@@ -101,6 +101,9 @@ public class CalculatorMainListener extends CalculatorBaseListener{
 
         Double resultB = calc("2 * 3 - 1 / -2 ^ 3");
         System.out.println("ResultB = " + resultB);// 6 - 1 / -8 = 6 + 0,125 = 6,125
+
+        Double resultC = calc("-3 / sqrt3 ^ 4 + 4 * 5");
+        System.out.println("ResultB = " + resultC);// -3 / 9 + 20 = 19,(6)
     }
 
     public static Double calc(String expression) {
